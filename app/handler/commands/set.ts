@@ -1,5 +1,5 @@
+import { setValue } from "../../store";
 import { encodeSimpleString, encodeError } from "../../utils/resp";
-import { setValue } from "../store";
 
 export function set(args: string[]): string {
   if (args.length < 2) {

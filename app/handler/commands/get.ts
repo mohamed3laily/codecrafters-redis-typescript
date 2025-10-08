@@ -1,9 +1,9 @@
+import { getValue } from "../../store";
 import {
   encodeBulkString,
   encodeNullBulkString,
   encodeError,
 } from "../../utils/resp";
-import { getValue } from "../store";
 
 export function get(args: string[]): string {
   if (args.length < 1) {
