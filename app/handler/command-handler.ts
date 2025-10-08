@@ -3,12 +3,14 @@ import { ping } from "./commands/ping";
 import { echo } from "./commands/echo";
 import { set } from "./commands/set";
 import { get } from "./commands/get";
+import { rpush } from "./commands/rpush";
 
 const commandHandlers: Record<string, (args: string[]) => string> = {
   PING: () => ping(),
   ECHO: echo,
   SET: set,
   GET: get,
+  RPUSH: rpush,
 };
 
 export function handleCommand(parts: string[]): string {

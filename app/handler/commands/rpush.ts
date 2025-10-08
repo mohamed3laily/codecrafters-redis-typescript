@@ -5,7 +5,6 @@ export function rpush(args: string[]): string {
   if (args.length < 2) {
     return encodeError("ERR wrong number of arguments for 'RPUSH'");
   }
-
   const [key, ...values] = args;
 
   try {
