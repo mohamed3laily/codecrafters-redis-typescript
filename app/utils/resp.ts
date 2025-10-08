@@ -27,6 +27,10 @@ export function encodeBulkString(value: string): string {
   return `$${value.length}\r\n${value}\r\n`;
 }
 
+export function encodeNullBulkString(): string {
+  return `$-1\r\n`;
+}
+
 export function encodeError(message: string): string {
   return `-ERR ${message}\r\n`;
 }
